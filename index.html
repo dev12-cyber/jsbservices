@@ -35,6 +35,53 @@
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
 <style>
+	.main-footer_logo img {
+  max-width: 150px;   /* Controls logo size on large screens */
+  height: auto;
+}
+
+/* Smaller logo on mobile view */
+@media (max-width: 767.98px) {
+  .main-footer_logo img {
+    max-width: 100px; /* Smaller size for mobile */
+  }
+}
+
+	.hero-slider-section,
+.hero-main-slider,
+.swiper-slide {
+  height: 100vh;
+  min-height: 600px; /* fallback for older browsers */
+  position: relative;
+}
+
+.hero-image-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+
+@media (max-width: 767.98px) {
+  .hero-slider-section,
+  .hero-main-slider,
+  .swiper-slide {
+    height: 60vh;
+    min-height: 450px;
+  }
+
+
+  .hero-image-layer {
+    background-position: top center;
+  }
+}
+
 	.floating-contact-buttons {
   position: fixed;
   bottom: 20px;
@@ -92,75 +139,11 @@
   padding: 150px 15px 100px;
 }
 
-.hero-content {
-  text-align: center;
-  color: #fff;
-}
 
-.hero-subtitle {
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #f4c542;
-  margin-bottom: 15px;
-}
 
-.hero-heading {
-  font-size: 48px;
-  line-height: 1.3;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
 
-.hero-heading span {
-  color: #f4c542;
-}
 
-.hero-text {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto 30px;
-  line-height: 1.6;
-}
 
-.hero-buttons {
-  gap: 20px;
-}
-
-.hero-btn {
-  display: inline-block;
-  padding: 14px 35px;
-  background-color: rgb(1,143,85);
-  color: #ffffff;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  border-radius: 4px;
-}
-
-.hero-btn:hover {
-  background-color: rgb(1,143,85);
-  color: #fff;
-}
-
-.hero-btn-wrap {
-  position: relative;
-}
-
-.hero-btn-text-two {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.hero-btn:hover .hero-btn-text-one {
-  opacity: 0;
-}
-.hero-btn:hover .hero-btn-text-two {
-  opacity: 1;
-}
 
 .hero-video .hero-play-box {
   display: inline-block;
@@ -469,20 +452,6 @@
         <div class="hero-container">
           <div class="hero-content">
             <div class="hero-inner-content">
-              <div class="hero-subtitle">Powering Progress, Building Trust</div>
-              <h1 class="hero-heading">Your All-in-One  <span>MEP & Civil </span> Partner</h1>
-              <div class="hero-text">JSB Services delivers integrated Electrical, Plumbing, Fire Fighting, HVAC, HTP, STP, and Civil solutions—ensuring seamless execution from concept to completion.</div>
-              <div class="hero-buttons d-flex align-items-center justify-content-center flex-wrap">
-                <a href="about.html" class="hero-btn theme-btn btn-style-two">
-                  <span class="hero-btn-wrap">
-                    <span class="hero-btn-text-one">Work With Us</span>
-                    <span class="hero-btn-text-two">Work With Us</span>
-                  </span>
-                </a>
-                <div class="hero-video">
-                  <a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="lightbox-video hero-play-box"><span class="fa fa-play"></span></a>
-                </div>
-              </div>
               <div class="hero-arrow" style="background-image:url(assets/images/main-slider/banner.avif)"></div>
             </div>
           </div>
@@ -496,20 +465,6 @@
         <div class="hero-container">
           <div class="hero-content">
             <div class="hero-inner-content">
-              <div class="hero-subtitle">Residential. Commercial. Exceptional.</div>
-              <h1 class="hero-heading">Reliable <span> Services for </span>Every Space</h1>
-              <div class="hero-text">From modern homes to complex commercial spaces, JSB Services ensures efficiency, safety, and comfort with expertly delivered MEP and civil engineering.</div>
-              <div class="hero-buttons d-flex align-items-center justify-content-center flex-wrap">
-                <a href="about.html" class="hero-btn theme-btn btn-style-two">
-                  <span class="hero-btn-wrap">
-                    <span class="hero-btn-text-one">Work With Us</span>
-                    <span class="hero-btn-text-two">Work With Us</span>
-                  </span>
-                </a>
-                <div class="hero-video">
-                  <a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="lightbox-video hero-play-box"><span class="fa fa-play"></span></a>
-                </div>
-              </div>
               <div class="hero-arrow" style="background-image:url(assets/images/main-slider/vector-2.png)"></div>
             </div>
           </div>
@@ -523,20 +478,6 @@
         <div class="hero-container">
           <div class="hero-content">
             <div class="hero-inner-content">
-              <div class="hero-subtitle mt-2">Precision. Performance. Professionalism</div>
-              <h1 class="hero-heading">Elevating <span> Infrastructure</span> Standards</h1>
-              <div class="hero-text">Our end-to-end expertise in Electrical, HVAC, STP, and Plumbing systems meets the highest industry standards—powering sustainable, future-ready developments.</div>
-              <div class="hero-buttons d-flex align-items-center justify-content-center flex-wrap">
-                <a href="about.html" class="hero-btn theme-btn btn-style-two">
-                  <span class="hero-btn-wrap">
-                    <span class="hero-btn-text-one">Work With Us</span>
-                    <span class="hero-btn-text-two">Work With Us</span>
-                  </span>
-                </a>
-                <div class="hero-video">
-                  <a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="lightbox-video hero-play-box"><span class="fa fa-play"></span></a>
-                </div>
-              </div>
               <div class="hero-arrow" style="background-image:url(assets/images/main-slider/vector-2.png)"></div>
             </div>
           </div>
@@ -556,6 +497,7 @@
     <a href="#">twitter</a>
   </div>
 </section>
+
 
 
 
@@ -990,6 +932,14 @@
     </div>
   </div>
 </section>
+<script>
+  // Fix layout issues on tab switch (especially for images in hidden tab-pane)
+  document.querySelectorAll('[data-bs-toggle="tab"]').forEach(tab => {
+    tab.addEventListener('shown.bs.tab', () => {
+      window.dispatchEvent(new Event('resize'));
+    });
+  });
+</script>
 
 
 	<!-- End Project One -->
@@ -1215,54 +1165,7 @@
 			</div>
 			
 			<!-- Clients Box One -->
-			<div class="clients-box_one">
-				<div class="clients-one_slider swiper-container">
-					<div class="swiper-wrapper">
-						
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<div class="client-image">
-								<a href="#"><img src="assets/images/clients/1.png" alt="" /></a>
-							</div>
-						</div>
-
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<div class="client-image">
-								<a href="#"><img src="assets/images/clients/2.png" alt="" /></a>
-							</div>
-						</div>
-
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<div class="client-image">
-								<a href="#"><img src="assets/images/clients/3.png" alt="" /></a>
-							</div>
-						</div>
-
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<div class="client-image">
-								<a href="#"><img src="assets/images/clients/4.png" alt="" /></a>
-							</div>
-						</div>
-
-						<!-- Slide -->
-						<div class="swiper-slide">
-							<div class="client-image">
-								<a href="#"><img src="assets/images/clients/3.png" alt="" /></a>
-							</div>
-						</div>
-
-					</div>
-
-				</div>
-				
-				<div class="text-center">
-					<div class="client-one_subtitle">we’re proud to partner with best-in-class clients</div>
-				</div>
-				
-			</div>
+		
 			<!-- End Clients Box One -->
 			
 		</div>
